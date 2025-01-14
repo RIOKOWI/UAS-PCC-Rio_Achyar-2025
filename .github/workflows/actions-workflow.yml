@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Login to DockerHub
+      - name: Login to DockerHub # login
         run: |
           echo "${{ secrets.DOCKERHUB_ACCESSTOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
